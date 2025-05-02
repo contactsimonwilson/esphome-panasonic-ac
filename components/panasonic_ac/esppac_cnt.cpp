@@ -267,7 +267,7 @@ void PanasonicACCNT::handle_cmd() {
  */
 
 bool PanasonicACCNT::verify_packet() {
-  int size = this->rx_buffer.size();
+  int size = this->rx_buffer_.size();
   if (size < 12) {
     ESP_LOGW(TAG, "Dropping invalid packet (length) %d", size);
 
